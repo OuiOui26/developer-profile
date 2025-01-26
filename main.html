@@ -3,9 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="assets/js/carousel.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <div class="nav-bar">
+        <section>Profile</section>
+        <section>Work Experience</section>
+        <section>Interests</section>
+        <section>Contact Details</section>
+    </div>
+    <div class="container">
+        <section class="profile">
+            <header class="profile-header">
+                <div class="profile-header__avatar">
+                  <img src="public\profile.jpg" alt="Developer Avatar">
+                </div>
+                <div class="profile-header__details">
+                    <h1 class="profile-header__name">Lieudwig Abella</h1>
+                    <p class="profile-header__title">Full-Stack Developer / Game Developer</p>
+                    <p class="profile-header__location">Cebu City, Cebu</p>
+                </div>
+              </header>
+        </section>
+        <section class="profile-summary">
+            <div class="profile-summary__text_section">
+                <p>I am a Game Developer and Full-Stack Developer with 2 years of experience working with a variety of technologies,<br>
+                    such as Unity for Game Development, PHP Laravel, ReactJS with Typescripting and IntertiaJS in building scalable web applications, <br>
+                    as well as working with HTML, SASS and Javascript for landing pages. I am passionate in continued learning as a developer in learning <br>
+                    new technologies and improving my understanding of the digital
+                </p>
+              </div>
+        </section>
+
+        <!-- <section class="dev-stack">
+            <h1>Dev Stack</h1>
+            <div class="dev-stack__list"> 
+                <ul>
+                    <li>
+                        <p>Unity with C#</p>
+                        <img src="public\unity.png" alt="Unity">
+                    </li>
+                    <li>
+                        <p>PHP Laravel</p>
+                        <img src="public\laravel.png" alt="Laravel">
+                    </li>
+                    <li>
+                        <p>ReactJS</p>
+                        <img src="public\react.png" alt="React">
+                    </li>
+                    <li>
+                        <p>IntertiaJS</p>
+                        <img src="public\intertiaJs.png" alt="Intertia">
+                    </li>
+                    <li>
+                        <p>MySQl</p>
+                        <img src="public\mysql.png" alt="MySQL">
+                    </li>
+                    <li>
+                        <p>MySQl</p>
+                        <img src="public\mysql.png" alt="MySQL">
+                    </li>
+                    <li>
+                        <p>Tailwind CSS</p>
+                        <img src="public\mysql.png" alt="MySQL">
+                    </li>
+                    <li>
+                        <p>Git/Github</p>
+                        <img src="public\mysql.png" alt="MySQL">
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+        <div class="dev-stack">
+            <h1>Developer Stack</h1>
+            <div class="carousel">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <p>Unity with C#</p>
+                  <img src="public/unity.png" alt="Unity">
+                </div>
+                <div class="carousel-item">
+                  <p>PHP Laravel</p>
+                  <img src="public/laravel.png" alt="Laravel">
+                </div>
+                <div class="carousel-item">
+                    <p>ReactJS</p>
+                    <img src="public/react.png" alt="React">
+                </div>
+                <div class="carousel-item">
+                    <p>MySQL</p>
+                    <img src="public/mysql.png" alt="React">
+                </div>
+                <div class="carousel-item">
+                    <p>IntertiaJS</p>
+                    <img src="public/intertiaJs.png" alt="React">
+                </div>
+                <div class="carousel-item">
+                    <p>IntertiaJS</p>
+                    <img src="public/intertiaJs.png" alt="React">
+                </div>
+              </div>
+              <button class="carousel-btn prev">‹</button>
+              <button class="carousel-btn next">›</button>
+            </div>
+          
+          </div>
+    </div>
+    <div class="footer">
+        <section class="email">Email</section>
+        <section class="contact-number">Contact Number</section>
+    </div>
 </body>
 </html>
