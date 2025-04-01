@@ -1,32 +1,33 @@
-window.onload = function() {
-  const track = document.querySelector('.carousel-track');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
+document.addEventListener("DOMContentLoaded", () => {
+  const logosSlide = document.querySelector('.logos-slide');
+  const logos = logosSlide.querySelectorAll('img');
+  
+  const clonedLogos = Array.from(logos).map(logo => logo.cloneNode(true));
+  logosSlide.append(...clonedLogos);
 
-  let currentIndex = 0;
+  function animateLogos() {
+    const logoWidth = logos[0].offsetWidth + 80; 
 
-  nextBtn.addEventListener('click', () => {
-    const totalItems = track.children.length;
-    const itemsPerView = 3;
-    if (currentIndex < totalItems - itemsPerView) {
-      currentIndex++;
-    } else {
-      currentIndex = 0; 
+
+
+    logosSlide.style.transform = `translateX(0px)`;
+
+
+    let currentPosition = 0;
+    function moveLogos() {
+      currentPosition -= 1; 
+      logosSlide.style.transform = `translateX(${currentPosition}px)`;
+
+
+      if (Math.abs(currentPosition) >= logoWidth * logos.length) {
+        currentPosition = 0;
+      }
+
+      requestAnimationFrame(moveLogos); 
     }
 
-    track.style.transform = `translateX(-${currentIndex * 33.33}%)`; 
-  });
+    moveLogos(); 
+  }
 
-  prevBtn.addEventListener('click', () => {
-    const totalItems = track.children.length;
-    const itemsPerView = 3;
-
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = totalItems - itemsPerView; 
-    }
-
-    track.style.transform = `translateX(-${currentIndex * 33.33}%)`; 
-  });
-};
+  animateLogos(); 
+});

@@ -19,7 +19,6 @@ body {
   background-color: #f8f8f8;
 }
 
-
 h1, h2, h3 {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -40,7 +39,7 @@ p {
 
 /* CSS Details */
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 2rem;
 
@@ -54,6 +53,11 @@ section{
 .profile{
   display: flex;
   justify-items: center;
+  .profile-header{
+    display: flex;
+    gap: 4em;
+    padding-bottom: 3em;
+  }
   .profile-header__avatar{
     display: flex;
     justify-content: center;
@@ -63,84 +67,45 @@ section{
     }
   }
 }
+.profile-summary{
+  .profile-summary__text_section{
+    width: 80%;
+  }
+
+}
 
 .dev-stack {
   display: flex;
   flex-direction: column; 
   align-items: center; 
   padding-top: 3em;
+  width: 100%;
 
   h1 {
     display: flex;
     justify-content: center;
   }
-
-  .carousel {
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden; 
-  }
-
-  .carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .carousel-item {
-    flex: 0 0 33.33%; 
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .carousel-item img {
-    max-width: 250px;
-    height: auto;
-    margin-top: 1rem;
-  }
-
-  .carousel-btn {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 10;
-  }
-
-  .carousel-btn.prev {
-    left: 0;
-  }
-
-  .carousel-btn.next {
-    right: 0;
-  }
-
-  .dev-stack__list ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .dev-stack__list li {
-    flex: 0 0 auto;
-    text-align: center;
-    width: 150px;
-  }
-
-  .dev-stack__list img {
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
     width: 100%;
-    height: auto;
-    margin-top: 0.5rem;
-    border-radius: 0.5rem;
   }
+  .logos-slide{
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
+  }
+  .logos-slide img{
+    height: 100px;
+    margin: 0 40px;
+  }
+}
+
+
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
 }
 
 .nav-bar{
