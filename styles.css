@@ -74,6 +74,7 @@ section{
     display: flex;
     justify-content: center;
     img{
+      width:20em;
       object-fit: contain;
       border-radius: 2em;
     }
