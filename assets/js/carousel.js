@@ -5,29 +5,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const clonedLogos = Array.from(logos).map(logo => logo.cloneNode(true));
   logosSlide.append(...clonedLogos);
 
+  let currentPosition = 0;
+  let isPaused = false;
+
   function animateLogos() {
-    const logoWidth = logos[0].offsetWidth + 80; 
+    const logoWidth = logos[0].offsetWidth + 80;
 
-
-
-    logosSlide.style.transform = `translateX(0px)`;
-
-
-    let currentPosition = 0;
     function moveLogos() {
-      currentPosition -= 1; 
-      logosSlide.style.transform = `translateX(${currentPosition}px)`;
+      if (!isPaused) {
+        currentPosition -= 1;
+        logosSlide.style.transform = `translateX(${currentPosition}px)`;
 
-
-      if (Math.abs(currentPosition) >= logoWidth * logos.length) {
-        currentPosition = 0;
+        if (Math.abs(currentPosition) >= logoWidth * logos.length) {
+          currentPosition = 0;
+        }
       }
 
-      requestAnimationFrame(moveLogos); 
+      requestAnimationFrame(moveLogos);
     }
 
-    moveLogos(); 
+    moveLogos();
   }
 
-  animateLogos(); 
+
+  logosSlide.addEventListener("mouseenter", () => {
+    isPaused = true;
+  });
+
+
+  logosSlide.addEventListener("mouseleave", () => {
+    isPaused = false;
+  });
+
+  animateLogos();
 });
