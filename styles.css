@@ -78,16 +78,13 @@ p {
   color: greenyellow;
   cursor: none;
 }
-/* .hover-text:hover::before {
-  width: 120%;
-  height: 200%;
-} */
+
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 100px auto;
   padding: 2rem;
-  /* border: 1px solid black; */
+
 }
 
 section {
@@ -181,7 +178,8 @@ section {
   flex-direction: column;
   align-items: center;
   padding-top: 3em;
-  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
 }
 
 .dev-stack h1 {
@@ -212,11 +210,11 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  margin: auto;
+  margin: 3em auto;
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .section-title {
